@@ -17,11 +17,11 @@ export const AnimatedContactHeaderBox = () => {
     <AnimatedBox className="col-span-5 row-span-2 p-0">
       <div className="p-8 space-y-5">
         <h2 className="text-4xl font-medium leading-tight flex items-center gap-3">
-          <MailIcon className="size-8 text-zinc-400" /> Contact Me
+          <MailIcon className="size-8 text-zinc-400" /> Contactarme
         </h2>
         <p className="text-zinc-300">
-          I'm always open to new opportunities and collaborations. Feel free to
-          reach out through any of my available channels:
+         Sientase libre de contactarme por whatsapp o LinkedIn, estoy abierto a cualquier oferta 
+  y siempre estoy en busca de experiencias nuevas.
         </p>
         <div className="grid grid-cols-1 gap-2">
           {contactOptions.map((option, idx) => (

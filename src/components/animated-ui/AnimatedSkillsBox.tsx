@@ -5,12 +5,12 @@ import { twMerge } from "tailwind-merge";
 
 export const AnimatedSkillsBox = () => {
   return (
-    <AnimatedBox className="col-span-5 row-span-2 grid grid-cols-4 gap-4">
-      <div className="col-span-2 flex items-center justify-center">
-        <motion.h2 whileHover={{ scale: 1.1 }} className="font-bold text-xl">
-          TECK STACK
-        </motion.h2>
+    <AnimatedBox className="col-span-5 row-span-2 grid grid-cols-4 gap-6">
+      {/* Título centrado */}
+      <div className="col-span-4 flex items-center justify-center mb-2">
+        <h2 className="font-bold text-xl tracking-wide">TECNOLOGIAS</h2>
       </div>
+
       {myInfo.skills.map((skill) => (
         <SkillItem key={skill.name} className={skill.className}>
           {skill.children}
@@ -26,12 +26,14 @@ const SkillItem = ({ className, ...rest }: StackItemProps) => {
   return (
     <motion.div
       whileHover={{
-        scale: 1.1,
-        rotate: Math.random() > 0.5 ? 12 : -12,
-        y: -10,
+        scale: 1.08,
+        rotate: Math.random() > 0.5 ? 8 : -8,
+        y: -6,
       }}
       className={twMerge(
-        "col-span-1 rounded size-full aspect-square flex items-center justify-center bg-zinc-400",
+        // 🔥 CUADRADO REAL + grande + marco correcto
+        "aspect-square rounded-xl flex items-center justify-center",
+        "bg-[#18181B] border border-[#3F3F47] p-3", // marco exacto del portfolio
         className
       )}
       {...rest}

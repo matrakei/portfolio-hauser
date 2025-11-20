@@ -10,10 +10,9 @@ export const AnimatedExperienceHeaderBox = () => {
           <BriefcaseBusiness className="size-8 text-zinc-400" /> Experience
         </h2>
         <p className="text-zinc-300">
-          I have actual hands on experience in software development, working
-          with teams of different sizes.
+          La experiencia laboral con la que cuento la adquiri mediante disntitos encuentros que tuve y actividades que realicé
           <br />
-          Here are some of my professional experiences:
+        
         </p>
       </div>
     </AnimatedBox>

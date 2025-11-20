@@ -1,92 +1,106 @@
 // src/assets/data.ts
-import { Book, Dumbbell, Gamepad2 } from "lucide-react";
-import { AiOutlineDotNet } from "react-icons/ai";
-import { FaDocker, FaNodeJs, FaReact } from "react-icons/fa";
-import { TbSql } from "react-icons/tb";
-import { VscAzure } from "react-icons/vsc";
+import { Gamepad2 } from "lucide-react";
 import type { Experience } from "../lib/types";
 
 export const myInfo = {
-  // ===================== DATOS PRINCIPALES =====================
   name: "Tomás Hauser",
   alias: "Tomás",
   title: "Estudiante en ORT Montañeses",
-  // poné tu foto en /public con este nombre
   image: "/tomas-profile.jpg",
 
-  // ===================== TECNOLOGÍAS (TECK STACK) =====================
-  // Me dijiste "dejá esas" → mantengo las mismas del repo
+  // ===================== TECNOLOGÍAS =====================
   skills: [
     {
-      name: ".Net",
-      children: <AiOutlineDotNet className="size-10" />,
-      className: "bg-violet-500",
+      name: "C#",
+      children: (
+        <img
+          src="/csharp-icon.png"
+          className="w-16 h-16 object-contain"
+          draggable="false"
+        />
+      ),
+      className: "",
     },
     {
-      name: "React",
-      children: <FaReact className="size-10" />,
-      className: "bg-sky-500",
+      name: "FastAPI",
+      children: (
+        <img
+          src="/fastapi-icon.png"
+          className="w-16 h-16 object-contain"
+          draggable="false"
+        />
+      ),
+      className: "",
     },
     {
-      name: "Docker",
-      children: <FaDocker className="size-10" />,
-      className: "bg-blue-700",
+      name: "Python",
+      children: (
+        <img
+          src="/python-icon.png"
+          className="w-16 h-16 object-contain"
+          draggable="false"
+        />
+      ),
+      className: "",
     },
     {
-      name: "NodeJS",
-      children: <FaNodeJs className="size-10" />,
-      className: "bg-green-500",
-    },
-    {
-      name: "Azure",
-      children: <VscAzure className="size-10" />,
-      className: "bg-blue-500",
-    },
-    {
-      name: "Sql",
-      children: <TbSql className="size-10" />,
-      className: "bg-yellow-500 text-zinc-900",
+      name: "Unity",
+      children: (
+        <img
+          src="/unity-icon.png"
+          className="w-16 h-16 object-contain"
+          draggable="false"
+        />
+      ),
+      className: "",
     },
   ],
 
-  // ===================== ABOUT ME / QUIÉN SOY =====================
+  // ===================== ABOUT ME =====================
   about_me: {
     head:
       "Soy un estudiante de software especializado en desarrollo de videojuegos. Estoy aprendiendo sobre desarrollo back-end y hoy en día busco mejorar mis habilidades y aprender cosas nuevas, estoy abierto a cualquier tipo de oportunidad.",
-    // Me dijiste “dejá esos” → mantengo el snapshot original
+
     snapshot: [
       {
-        label: "10 000 +",
-        value: "Lines of code written",
+        label: "",
+        value: (
+          <img
+            src="/projects/myfit.png"
+            className="w-full h-full object-cover rounded-md"
+            draggable="false"
+          />
+        ),
       },
       {
-        label: "6",
-        value: "Years of experience",
+        label: "",
+        value: (
+          <img
+            src="/projects/vrbox.png"
+            className="w-full h-full object-cover rounded-md"
+            draggable="false"
+          />
+        ),
       },
       {
-        label: "2.5",
-        value: "Spoken languages",
-      },
-      {
-        label: "2",
-        value: "Countries lived in",
+        label: "",
+        value: (
+          <img
+            src="/projects/pipeeye.png"
+            className="w-full h-full object-cover rounded-md"
+            draggable="false"
+          />
+        ),
       },
     ],
-    // Hobbies: “si” → dejo estos
+
+    // ⭐ HOBBIES actualizados (gaming, basquet, música)
     hobbies: [
-      {
-        name: "Gaming",
-        icon: <Gamepad2 className="size-6 text-zinc-400" />,
-      },
-      {
-        name: "Reading",
-        icon: <Book className="size-6 text-zinc-400" />,
-      },
-      {
-        name: "Gym",
-          icon: <Dumbbell className="size-6 text-zinc-400" />,
-      },
+      { name: "Gaming", icon: <Gamepad2 className="size-6 text-zinc-400" /> },
+      { name: "Basquet", icon: <img src="/basquet.png" className="w-6 h-6 object-contain" /> },
+      { name: "Música", icon: <img src="/musica.png" className="w-6 h-6 object-contain" /> },
     ],
+
     other:
       "Me interesan los proyectos donde pueda aprender cosas nuevas, experimentar con tecnología y seguir creciendo como desarrollador.",
   },
@@ -96,15 +110,12 @@ export const myInfo = {
     email: "tomashauser2007@gmail.com",
     phone: "+54 9 11 5220-1926",
     whatsapp: "https://wa.me/5491152201926",
-    // si todavía no querés links reales, dejá "#" o completalos después
     linkedin: "#",
     github: "#",
     location: "Buenos Aires, Argentina",
   },
 
   // ===================== EXPERIENCIA =====================
-  // La idea es que las tarjetas queden igual que en tu diseño:
-  // textos genéricos “Tipo de experiencia laboral…”
   experience: {
     work: [
       {
@@ -174,7 +185,6 @@ export const myInfo = {
       technologies: ["C#", "VS Code", "Climate API"],
       liveLink: "",
       githubLink: "",
-      // guardá la imagen en /public/projects/myfit.png
       image: "/projects/myfit.png",
     },
     {
@@ -189,15 +199,13 @@ export const myInfo = {
     {
       title: "PipeEye",
       description:
-        "Página web potenciada por inteligencia artificial dedicada a detectar y clasificar tipos de fallas en radiografías de soldaduras de ductos de transporte de gases y líquidos varios.",
-      technologies: ["SupaBase DB", "Python", "React", "FastAPI", "Modelo IA entrenado"],
+        "Página web potenciada por inteligencia artificial dedicada a detectar y clasificar fallas en radiografías de soldaduras.",
+      technologies: ["SupaBase DB", "Python", "React", "FastAPI", "Modelo IA"],
       liveLink: "",
       githubLink: "",
       image: "/projects/pipeeye.png",
     },
   ],
 
-  // ===================== CERTIFICACIONES =====================
-  // Si después querés poner alguna, la agregamos.
   certifications: [],
 };
