@@ -1,3 +1,4 @@
+// src/assets/data.ts
 import { Book, Dumbbell, Gamepad2 } from "lucide-react";
 import { AiOutlineDotNet } from "react-icons/ai";
 import { FaDocker, FaNodeJs, FaReact } from "react-icons/fa";
@@ -6,10 +7,15 @@ import { VscAzure } from "react-icons/vsc";
 import type { Experience } from "../lib/types";
 
 export const myInfo = {
-  name: "Damián Briones",
-  alias: "Damian",
-  title: "Senior Software Engineer",
-  image: "/personal.jpg",
+  // ===================== DATOS PRINCIPALES =====================
+  name: "Tomás Hauser",
+  alias: "Tomás",
+  title: "Estudiante en ORT Montañeses",
+  // poné tu foto en /public con este nombre
+  image: "/tomas-profile.jpg",
+
+  // ===================== TECNOLOGÍAS (TECK STACK) =====================
+  // Me dijiste "dejá esas" → mantengo las mismas del repo
   skills: [
     {
       name: ".Net",
@@ -42,8 +48,12 @@ export const myInfo = {
       className: "bg-yellow-500 text-zinc-900",
     },
   ],
+
+  // ===================== ABOUT ME / QUIÉN SOY =====================
   about_me: {
-    head: "I'm a software developer with six years of experience, and I’m gradually moving toward fullstack work. I enjoy figuring out problems and writing innovative software. I’m open to new remote opportunities.",
+    head:
+      "Soy un estudiante de software especializado en desarrollo de videojuegos. Estoy aprendiendo sobre desarrollo back-end y hoy en día busco mejorar mis habilidades y aprender cosas nuevas, estoy abierto a cualquier tipo de oportunidad.",
+    // Me dijiste “dejá esos” → mantengo el snapshot original
     snapshot: [
       {
         label: "10 000 +",
@@ -62,6 +72,7 @@ export const myInfo = {
         value: "Countries lived in",
       },
     ],
+    // Hobbies: “si” → dejo estos
     hobbies: [
       {
         name: "Gaming",
@@ -73,134 +84,120 @@ export const myInfo = {
       },
       {
         name: "Gym",
-        icon: <Dumbbell className="size-6 text-zinc-400" />,
+          icon: <Dumbbell className="size-6 text-zinc-400" />,
       },
     ],
     other:
-      "I’m open to new remote opportunities that bring a real challenge and better overall conditions. Outside of work, I write code for fun, watch more series than I care to admit, play some Minecraft, and make time for the gym.",
+      "Me interesan los proyectos donde pueda aprender cosas nuevas, experimentar con tecnología y seguir creciendo como desarrollador.",
   },
+
+  // ===================== CONTACTO =====================
   contact: {
-    email: "work@damianbriones.dev",
-    phone: "+593 98 762 1334",
-    whatsapp: "https://wa.me/593987621334",
-    linkedin: "https://www.linkedin.com/in/damian-briones-flachier/",
-    github: "https://www.github.com/CodeINN95612",
-    location: "Quito, Ecuador",
+    email: "tomashauser2007@gmail.com",
+    phone: "+54 9 11 5220-1926",
+    whatsapp: "https://wa.me/5491152201926",
+    // si todavía no querés links reales, dejá "#" o completalos después
+    linkedin: "#",
+    github: "#",
+    location: "Buenos Aires, Argentina",
   },
+
+  // ===================== EXPERIENCIA =====================
+  // La idea es que las tarjetas queden igual que en tu diseño:
+  // textos genéricos “Tipo de experiencia laboral…”
   experience: {
     work: [
       {
-        title: "Senior Software Engineer",
-        company: "Logiztik Alliance Group",
-        location: "Quito, Ecuador",
-        dateRange: "2023 - Today",
+        title: "Tipo de experiencia laboral",
+        company: "título de la misma",
+        location: "Provincia, País",
+        dateRange: "duración",
         description:
-          "Develop and maintain the company’s logistics system, refactor legacy code, and build new features and microservices. Lead the team as a Scrum master.",
-        skills: ["C#", ".NET", "SQL", "Docker", "Azure Devops", "Scrum"],
+          "Descripción no tan compleja de que aportó en la experiencia y en qué me aportó a mí.",
+        skills: ["Lenguaje", "Framework", "Herramientas", "etc..."],
+        current: false,
+      },
+      {
+        title: "Tipo de experiencia laboral",
+        company: "título de la misma",
+        location: "Provincia, País",
+        dateRange: "duración",
+        description:
+          "Descripción no tan compleja de que aportó en la experiencia y en qué me aportó a mí.",
+        skills: ["Lenguaje", "Framework", "Herramientas", "etc..."],
         current: true,
       },
-      {
-        title: "Junior Software Engineer",
-        company: "CloudStudio",
-        location: "Quto, Ecuador",
-        dateRange: "2019 - 2023",
-        description:
-          "Developed and maintained a financial system used by banks nationwide. Refactored legacy code, provided customer support, and trained new developers.",
-        skills: ["C#", ".NET", "SQL", "Silverlight"],
-      },
     ] satisfies Experience[],
+
     freelance: [
       {
-        project: "Cyan-Bot",
-        client: "Independent",
-        description:
-          "Discord bot for that managing payments and roles in a translation community",
-        duration: "3 months",
-        skills: ["Python", "MongoDB"],
+        project: "Título de una - ¿con quién?",
+        client: "",
+        description: "Descripción corta del trabajo.",
+        duration: "",
+        skills: ["Lenguaje", "Framework", "Herramientas", "etc..."],
       },
       {
-        project: "ULI",
-        client: "Universidad de las Américas",
-        description:
-          "AI chatbot for customer service customized with information about the institution",
-        duration: "1 year",
-        skills: ["Python", "React", "C#", "SignalR", "Azure"],
+        project: "Título de otra - ¿con quién?",
+        client: "",
+        description: "Descripción corta del trabajo.",
+        duration: "",
+        skills: ["Lenguaje", "Framework", "Herramientas", "etc..."],
       },
     ],
   },
+
+  // ===================== EDUCACIÓN =====================
   studies: [
     {
-      degreeTitle: "Bachelor in Software Engineering",
-      institution: "Universidad de las Américas",
-      location: "Quito, Ecuador",
-      dateRange: "2019 - 2023",
+      degreeTitle: "Ingeniería en Informática",
+      institution: "ITBA",
+      location: "Buenos Aires, Argentina",
+      dateRange: "duración",
       topics: [
-        "Advanced programming",
-        "Advanced software engineering principles",
-        "Web, mobile, and desktop development",
-        "Game development",
-        "Software design",
-        "Networks and Operative Systems",
+        "conocimiento adquirido 1",
+        "conocimiento adquirido 2",
+        "conocimiento adquirido 3",
+        "conocimiento adquirido 4",
+        "conocimiento adquirido 5",
       ],
       current: false,
     },
   ],
+
+  // ===================== PROYECTOS =====================
   projects: [
     {
-      title: "Developer Portfolio",
-      description: "My personal developer portfolio",
-      technologies: ["React", "Tailwind CSS", "Typescript", "Framer Motion"],
-      liveLink: "https://www.damianbriones.dev",
-      githubLink: "https://github.com/CodeINN95612/damian-briones-portfolio",
-      image: "/projects/portfolio.jpg",
-    },
-    {
-      title: "We Like Sushi",
+      title: "MyFit",
       description:
-        "Blog / CMS to rate sushi restaurants with my girlfriend with Authentication. Currently in development.",
-      technologies: ["Sveltekit", "Tailwind CSS", "ShadCN", "Supabase"],
-      githubLink: "https://github.com/CodeINN95612/WeLikeSushi",
-      image: "/projects/we-like-sushi.jpg",
+        "Aplicación que en base a tu ropero digital y mediante un algoritmo con ingreso de variables genera una combinación de ropa apropiada para la ocasión correspondiente. Actualmente no quedó ningún registro del proyecto.",
+      technologies: ["C#", "VS Code", "Climate API"],
+      liveLink: "",
+      githubLink: "",
+      // guardá la imagen en /public/projects/myfit.png
+      image: "/projects/myfit.png",
     },
     {
-      title: "Oxify Mod",
-      description: "Minecraft mod that adds oxifier item to the game.",
-      technologies: ["Java", "Fabric"],
-      liveLink: "https://modrinth.com/mod/oxify",
-      githubLink: "https://github.com/CodeINN95612/OxifyMod",
-      image: "/projects/oxify.jpg",
-    },
-    {
-      title: "Auth Enterprise",
+      title: "VR-BOX",
       description:
-        "Authentication demo for youtube series about .NET auth. Manages JWT, Users, Roles, and Permissions.",
-      technologies: [
-        ".NET",
-        "C#",
-        "Entity Framework",
-        "PostgreSQL",
-        "Docker",
-        "Vertical Slice Architecture",
-      ],
-      liveLink: "https://www.youtube.com/watch?v=rcRMXLr4f60",
-      githubLink: "https://github.com/CodeINN95612/AuthEnterprise",
-      image: "/projects/auth-enterprise.jpg",
+        "Juego de boxeo sandbox en VR, incluye una batalla contra Gerónimo Sánchez Peruga, el legendario tutor de la materia videojuegos en la orientación TIC de ORT.",
+      technologies: ["C#", "Visual Studio", "Unity", "Meta Plugins"],
+      liveLink: "",
+      githubLink: "https://github.com/matrakei/VR-BOX-UNITY",
+      image: "/projects/vrbox.png",
+    },
+    {
+      title: "PipeEye",
+      description:
+        "Página web potenciada por inteligencia artificial dedicada a detectar y clasificar tipos de fallas en radiografías de soldaduras de ductos de transporte de gases y líquidos varios.",
+      technologies: ["SupaBase DB", "Python", "React", "FastAPI", "Modelo IA entrenado"],
+      liveLink: "",
+      githubLink: "",
+      image: "/projects/pipeeye.png",
     },
   ],
-  certifications: [
-    {
-      title: "Microsoft Certified: Azure Fundamentals",
-      date: "2024",
-      description:
-        "Demonstrates foundational level knowledge of cloud services and how those services are provided with Microsoft Azure.",
-      credentialId: "E795636135DDD8FD",
-      url: "https://learn.microsoft.com/api/credentials/share/en-us/DamianBriones-9572/E795636135DDD8FD?sharingId=5BCEED54F209B1C6",
-    },
-    {
-      title: "ScrumStudy Scrum Fundamentals Certified",
-      date: "2024",
-      description:
-        "Certification demonstrating knowledge of Scrum fundamentals.",
-    },
-  ],
+
+  // ===================== CERTIFICACIONES =====================
+  // Si después querés poner alguna, la agregamos.
+  certifications: [],
 };
