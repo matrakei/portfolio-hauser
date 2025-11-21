@@ -20,7 +20,7 @@ export const AnimatedMenuBox = ({ sectionChanged }: AnimatedMenuBoxProps) => {
   const menuItems = [
     {
       id: "home",
-      label: "Home",
+      label: "Inicio",
       icon: <IoHome />,
       onClick: () => {
         setActiveSection("home");
@@ -30,7 +30,7 @@ export const AnimatedMenuBox = ({ sectionChanged }: AnimatedMenuBoxProps) => {
     },
     {
       id: "about",
-      label: "About",
+      label: "Quién Soy",
       icon: <TbUserScan />,
       onClick: () => {
         setActiveSection("about");
@@ -40,7 +40,7 @@ export const AnimatedMenuBox = ({ sectionChanged }: AnimatedMenuBoxProps) => {
     },
     {
       id: "experience",
-      label: "Experience",
+      label: "Experiencia",
       icon: <MdWork />,
       onClick: () => {
         setActiveSection("experience");
@@ -50,7 +50,7 @@ export const AnimatedMenuBox = ({ sectionChanged }: AnimatedMenuBoxProps) => {
     },
     {
       id: "education",
-      label: "Education",
+      label: "Educación",
       icon: <PiStudentFill />,
       onClick: () => {
         setActiveSection("education");
@@ -60,7 +60,7 @@ export const AnimatedMenuBox = ({ sectionChanged }: AnimatedMenuBoxProps) => {
     },
     {
       id: "projects",
-      label: "Projects",
+      label: "Proyectos",
       icon: <FaCode />,
       onClick: () => {
         setActiveSection("projects");
@@ -70,7 +70,7 @@ export const AnimatedMenuBox = ({ sectionChanged }: AnimatedMenuBoxProps) => {
     },
     {
       id: "contact",
-      label: "Contact",
+      label: "Contacto",
       icon: <RiContactsBook3Fill />,
       onClick: () => {
         setActiveSection("contact");
@@ -126,7 +126,7 @@ const AnimatedMenuBoxItem = ({
       onClick={onClick}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      className={`text-center w-full cursor-pointer px-4 py-3 uppercase font-semibold relative transition-colors duration-150`}
+      className="text-center w-full cursor-pointer px-4 py-3 uppercase font-semibold relative transition-colors duration-150"
     >
       <motion.span
         animate={{
@@ -138,6 +138,7 @@ const AnimatedMenuBoxItem = ({
           selected && !hovered ? "bg-zinc-300" : "bg-zinc-200"
         }`}
       />
+
       <motion.div
         animate={{ scale: hovered || selected ? 1.1 : 1 }}
         transition={{ duration: 0.1 }}
@@ -157,6 +158,7 @@ const CvButton = () => {
       whileTap={{ scale: 0.95 }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-zinc-400 to-teal-400 rounded-lg"></div>
+
       <motion.a
         href="/CV.pdf"
         download
@@ -171,11 +173,12 @@ const CvButton = () => {
         >
           <BiDownload className="size-5" />
         </motion.span>
+
         <motion.span
           animate={{ y: [0, 2, -1, 0] }}
           transition={{ repeat: Infinity, duration: 5 }}
         >
-          Download CV
+          Descargar CV
         </motion.span>
       </motion.a>
     </motion.div>

@@ -18,7 +18,7 @@ export const AnimatedTitleHeaderBox = () => {
           className="flex items-center gap-1 text-teal-300 hover:underline"
           onClick={() => setActiveSection("contact")}
         >
-          Contact me <FiArrowRight />
+          Contactame <FiArrowRight />
         </button>
       </div>
     </AnimatedBox>

@@ -12,9 +12,9 @@ export const AnimatedLanguagesBox = () => {
 
   return (
     <AnimatedBox className="col-span-5 row-span-1 flex items-center justify-between p-2 px-6">
-      <p>English</p>
+      <p>Español</p>
       <FaLanguage className="size-10 text-teal-300" />
-      <p>Spanish</p>
+      <p>English</p>
     </AnimatedBox>
   );
 };

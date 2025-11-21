@@ -27,7 +27,7 @@ export const AnimatedProjectsBox = ({
         </div>
         <h2 className="text-4xl font-medium leading-tight flex items-center gap-3">
           <Code className="size-8 text-zinc-400" />
-          My Personal Projects
+          Mis Proyectos Personales
         </h2>
         <img
           src={image}
